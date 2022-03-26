@@ -65,16 +65,16 @@ namespace Shop
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-           if (env.IsDevelopment())
+           //if (env.IsDevelopment())
             
                 app.UseDeveloperExceptionPage();
             
-            else
-            {
-                app.UseExceptionHandler("/Error");
+            //else
+            //{
+            //    app.UseExceptionHandler("/Error");
 
-                app.UseHsts();
-            }
+            //    app.UseHsts();
+            //}
 
             app.UseHttpsRedirection();
 

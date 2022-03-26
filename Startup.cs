@@ -53,8 +53,8 @@ namespace Shop
                };
            });
 
-            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
-            //services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));
+            //services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));
 
             services.AddSwaggerGen(c =>
             {
@@ -65,10 +65,10 @@ namespace Shop
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
+           if (env.IsDevelopment())
+            
                 app.UseDeveloperExceptionPage();
-            }
+            
             else
             {
                 app.UseExceptionHandler("/Error");
